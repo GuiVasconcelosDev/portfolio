@@ -1,5 +1,9 @@
 package br.com.guilherme.portfolio.repository;
 
-public interface RecruiterProposalRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.guilherme.portfolio.entity.RecruiterProposal;
+
+public interface RecruiterProposalRepository extends JpaRepository<RecruiterProposal, Long>{
 
 }
