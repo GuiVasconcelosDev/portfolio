@@ -15,8 +15,8 @@ import br.com.guilherme.portfolio.entity.ContatoMessage;
 import br.com.guilherme.portfolio.repository.ContatoMessageRepository;
 
 @RestController
-@RequestMapping("/api/contatos")
-@CrossOrigin(origins = "*")
+@RequestMapping("/api/contato")
+@CrossOrigin
 public class ContactController {
 
     @Autowired
