@@ -31,3 +31,27 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# --- COMPILAÇÃO E BUILD ---
+target/
+build/
+.gradle/
+out/
+bin/
+
+# --- CONFIGURAÇÕES DE IDEs (IntelliJ, Eclipse, VS Code) ---
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# --- ARQUIVOS DE SISTEMA E LOGS ---
+*.log
+.DS_Store
+Thumbs.db
+
+# --- BANCO DE DADOS LOCAL (Caso mude o H2 de memória para arquivo) ---
+*.mv.db
+*.trace.db
