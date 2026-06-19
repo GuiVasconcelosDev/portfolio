@@ -20,7 +20,7 @@ public class RecruiterProposal {
 
     private String companyName;
     private String roleType;
-     private String stackPreference;
+    private String stackPreference;
     private String minSalaryRange;
 
     @Column(columnDefinition = "TEXT")
@@ -41,16 +41,52 @@ public class RecruiterProposal {
         this.createdAt = LocalDateTime.now();
     }
 
-    public Long getId() { return id; }
-    public String getCompanyName() { return companyName; }
-    public void setCompanyName(String companyName) { this.companyName = companyName; }
-    public String getRoleType() { return roleType; }
-    public void setRoleType(String roleType) { this.roleType = roleType; }
-    public String getStackPreference() { return stackPreference; }
-    public void setStackPreference(String stackPreference) { this.stackPreference = stackPreference; }
-    public String getMinSalaryRange() { return minSalaryRange; }
-    public void setMinSalaryRange(String minSalaryRange) { this.minSalaryRange = minSalaryRange; }
-    public String getFullProposalText() { return fullProposalText; }
-    public void setFullProposalText(String fullProposalText) { this.fullProposalText = fullProposalText; }
-    public LocalDateTime getCreatedAt() { return createdAt; }
+    public Long getId() {
+        return id; 
+    }
+
+    public String getCompanyName() {
+        return companyName; 
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName; 
+    }
+
+    public String getRoleType() {
+        return roleType; 
+    }
+
+    public void setRoleType(String roleType) {
+        this.roleType = roleType; 
+    }
+
+    public String getStackPreference() {
+        return stackPreference; 
+    }
+
+    public void setStackPreference(String stackPreference) {
+        this.stackPreference = stackPreference; 
+    }
+
+    public String getMinSalaryRange() {
+        return minSalaryRange; 
+    }
+
+    public void setMinSalaryRange(String minSalaryRange) {
+        this.minSalaryRange = minSalaryRange; 
+
+    }
+
+    public String getFullProposalText() {
+        return fullProposalText; 
+    }
+
+    public void setFullProposalText(String fullProposalText) {
+        this.fullProposalText = fullProposalText; 
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt; 
+    }
 }
