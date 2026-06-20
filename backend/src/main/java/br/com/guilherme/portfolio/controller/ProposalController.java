@@ -1,7 +1,7 @@
-package com.guilherme.portfolio.controller;
+package br.com.guilherme.portfolio.controller;
 
-import com.guilherme.portfolio.entity.RecruiterProposal;
-import com.guilherme.portfolio.repository.RecruiterProposalRepository;
+import br.com.guilherme.portfolio.entity.RecruiterProposal;
+import br.com.guilherme.portfolio.repository.RecruiterProposalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
