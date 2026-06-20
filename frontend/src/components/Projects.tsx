@@ -163,52 +163,6 @@ export default function Projects() {
             ))}
           </AnimatePresence>
         </div>
-
-        {/* High Conversion Recommendation Grid */}
-        <div className="mt-24 border-t border-slate-800/60 pt-20">
-          <div className="text-center max-w-xl mx-auto mb-12">
-            <h3 className="font-sans font-black text-2xl text-slate-100 tracking-tight">
-              O Que Dizem Líderes Tecnológicos
-            </h3>
-            <p className="font-sans text-slate-400 text-xs sm:text-sm mt-2">
-              Depoimentos reais sobre entregas corporativas, espírito de liderança e metodologias limpas.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Mari block */}
-            <div className="bg-[#0f172a]/70 p-6.5 border border-slate-800 rounded-2xl flex flex-col justify-between text-left space-y-6">
-              <p className="font-sans text-slate-300 text-xs sm:text-sm leading-relaxed italic font-light">
-                "Dificilmente encontramos profissionais com a flexibilidade do Guilherme. Ele transita de forma impecável na criação de APIs resilientes e escaláveis em Java, ao mesmo tempo em que desenha componentes em React reutilizáveis com animações suaves e interações modernas. É focado em desempenho extrema."
-              </p>
-              <div className="flex items-center gap-3 border-t border-[#020617] pt-4">
-                <div className="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center font-sans font-bold text-emerald-400 text-sm">
-                  MC
-                </div>
-                <div>
-                  <h4 className="font-sans font-bold text-slate-100 text-sm">Mariana Costa</h4>
-                  <p className="font-sans text-slate-500 text-xs">Head of Engineering @ TechNovation</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Roberto block */}
-            <div className="bg-[#0f172a]/70 p-6.5 border border-slate-800 rounded-2xl flex flex-col justify-between text-left space-y-6">
-              <p className="font-sans text-slate-300 text-xs sm:text-sm leading-relaxed italic font-light">
-                "Como recrutador técnico, o Guilherme me chamou a atenção não apenas pela sólida base teórica e de arquitetura limpa, mas pela sua clareza de comunicação e proatividade. Seus projetos têm documentações primorosas e suas interfaces são extremamente fluídas. Um profissional pronto."
-              </p>
-              <div className="flex items-center gap-3 border-t border-[#020617] pt-4">
-                <div className="w-10 h-10 rounded-full bg-teal-500/10 border border-teal-500/20 flex items-center justify-center font-sans font-bold text-teal-400 text-sm">
-                  RA
-                </div>
-                <div>
-                  <h4 className="font-sans font-bold text-slate-100 text-sm">Roberto Alencar</h4>
-                  <p className="font-sans text-slate-500 text-xs">Principal Tech Recruiter @ TalentForce</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

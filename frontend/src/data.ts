@@ -25,7 +25,7 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     id: "1",
-    title: "API RESTful de Barbearia SaaS ",
+    title: "API RESTful de Barbearia SaaS",
     description: "Desenvolvimento de uma API robusta utilizando Spring Boot e Spring Security com autenticação JWT.",
     category: "backend",
     keyArchitecture: "Java 21 / Spring Boot / MySQL",
@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "3",
-    title: "Bot de Whatsapp - SaaS",
+    title: "Bot de Whatsapp",
     description: "Desenvolvimento de um bot de WhatsApp para agendamento de serviços, utilizando Node.js e integração com Twilio API.",
     category: "fullstack",
     keyArchitecture: "Node.js / IA / Twilio API",
