@@ -16,7 +16,7 @@ import br.com.guilherme.portfolio.repository.RecruiterProposalRepository;
 
 @RestController
 @RequestMapping("/api/propostas")
-@CrossOrigin
+@CrossOrigin(origins = "${app.frontend.url}")
 public class ProposalController {
 
     @Autowired
