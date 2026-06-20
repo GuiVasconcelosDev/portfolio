@@ -9,8 +9,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
+import lombok.NoArgsConstructor;
 
 @Entity
+@NoArgsConstructor
 @Table(name = "recruiter_proposals")
 public class RecruiterProposal {
 
@@ -27,6 +29,7 @@ public class RecruiterProposal {
     private String fullProposalText;
 
     private LocalDateTime createdAt;
+
 
     public RecruiterProposal(String companyName, String roleType, String stackPreference, String minSalaryRange, String fullProposalText) {
         this.companyName = companyName;
