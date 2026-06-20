@@ -1,22 +1,16 @@
-package br.com.guilherme.portfolio.controller;
+package com.guilherme.portfolio.controller;
+
+import com.guilherme.portfolio.entity.RecruiterProposal;
+import com.guilherme.portfolio.repository.RecruiterProposalRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import br.com.guilherme.portfolio.entity.RecruiterProposal;
-import br.com.guilherme.portfolio.repository.RecruiterProposalRepository;
-
 @RestController
 @RequestMapping("/api/propostas")
-@CrossOrigin(origins = "${app.frontend.url}")
+@CrossOrigin
 public class ProposalController {
 
     @Autowired
