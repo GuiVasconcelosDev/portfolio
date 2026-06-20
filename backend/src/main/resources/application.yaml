@@ -3,8 +3,8 @@ spring:
     name: portfolio
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://postgres.acctunyhvicrvlydhspt:@aws-1-us-east-2.pooler.supabase.com:6543/postgres?sslmode=require}
-    username: ${DB_USERNAME:postgres}
+    url: ${DB_URL:jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:6543/postgres?sslmode=require}
+    username: ${DB_USERNAME:postgres.acctunyhvicrvlydhspt}
     password: ${DB_PASSWORD:ZKW5M8KXMvYFnRWi}
     driverClassName: org.postgresql.Driver
 
