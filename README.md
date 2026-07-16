@@ -1,6 +1,6 @@
 # Portfólio Full Stack
 
-Portfólio profissional de Guilherme Vasconcelos, construído com React e TypeScript no frontend e uma API Spring Boot no backend. O projeto apresenta perfil, competências e projetos, além de receber mensagens de contato e propostas de recrutadores.
+Portfólio profissional de Guilherme Vasconcelos (eu), construído com React e TypeScript no frontend e uma API Spring Boot no backend. O projeto apresenta perfil, competências e projetos, além de receber mensagens de contato e propostas de recrutadores.
 
 ## Demonstração
 
