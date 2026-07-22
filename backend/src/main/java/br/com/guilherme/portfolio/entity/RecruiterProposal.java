@@ -14,7 +14,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@NoArgsConstructor
 @Getter
 @Setter
 @Table(name = "recruiter_proposals")
@@ -43,6 +42,8 @@ public class RecruiterProposal {
         this.fullProposalText = fullProposalText;
     }
 
+    public RecruiterProposal() {}
+
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
@@ -50,6 +51,10 @@ public class RecruiterProposal {
 
     public Long getId() {
         return id; 
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCompanyName() {

@@ -3,9 +3,9 @@ spring:
     name: portfolio
 
   datasource:
-    url: ${DB_URL:jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:6543/postgres?sslmode=require}
-    username: ${DB_USERNAME:postgres.acctunyhvicrvlydhspt}
-    password: ${DB_PASSWORD:ZKW5M8KXMvYFnRWi}
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driverClassName: org.postgresql.Driver
 
   
@@ -13,7 +13,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
-    show-sql: true
+    sql-show: false
 
 app:
   frontend:

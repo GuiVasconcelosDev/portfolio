@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@NoArgsConstructor
 @Getter
 @Setter
 @Table(name = "contato_message")
@@ -38,6 +37,8 @@ public class ContatoMessage {
         this.subject = subject;
         this.message = message;
     }
+
+    public ContatoMessage() {}
 
     @PrePersist
     protected void onCreate() {

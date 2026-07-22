@@ -1,11 +1,7 @@
 package br.com.guilherme.portfolio.controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,23 +12,43 @@ import br.com.guilherme.portfolio.repository.ContatoMessageRepository;
 
 @RestController
 @RequestMapping("/api/contato")
-@CrossOrigin
 public class ContactController {
 
-    @Autowired
-    private ContatoMessageRepository contactRepository;
+    private final ContatoMessageRepository contactRepository;
 
-    @PostMapping
-    public ResponseEntity<ContatoMessage> registerMessage(@RequestBody ContatoMessage message) {
-        if (message.getName() == null || message.getEmail() == null || message.getMessage() == null) {
-            return ResponseEntity.badRequest().build();
-        }
-        ContatoMessage saved = contactRepository.save(message);
-        return ResponseEntity.ok(saved);
+    public ContactController(ContatoMessageRepository contactRepository) {
+        this.contactRepository = contactRepository;
     }
 
-    @GetMapping
-    public ResponseEntity<List<ContatoMessage>> getAllMessages() {
-        return ResponseEntity.ok(contactRepository.findAll());
+    @PostMapping
+    public ResponseEntity<Void> registerMessage(
+            @RequestBody ContatoMessage message) {
+
+        if (isBlank(message.getName())
+                || isBlank(message.getEmail())
+                || isBlank(message.getMessage())
+                || message.getName().length() > 100
+                || message.getEmail().length() > 254
+                || message.getMessage().length() > 5000
+                || isTooLong(message.getSubject(), 150)) {
+
+            return ResponseEntity.badRequest().build();
+        }
+
+        message.setId(null);
+
+        contactRepository.save(message);
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .build();
+    }
+
+    private boolean isBlank(String value) {
+        return value == null || value.isBlank();
+    }
+
+    private boolean isTooLong(String value, int maxLength) {
+        return value != null && value.length() > maxLength;
     }
 }
